@@ -4,7 +4,7 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "xxxxxxxxxx",
+  apiKey: "AIzaSyDzaZQy-wTlmaezqO43PLuFwX0nY62J6VI",
   authDomain: "keja-a010d.firebaseapp.com",
   projectId: "keja-a010d",
   storageBucket: "keja-a010d.appspot.com",
