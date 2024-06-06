@@ -1,9 +1,6 @@
-
-
 const About = () => {
   return (
-    <div
-            className='container mx-auto p-4 mt-24'>
+    <div className='container mx-auto p-4 mt-24'>
       <h1 className='text-3xl font-bold mb-4'>
         Discover Keja: Your Home Away From Home
       </h1>
@@ -19,11 +16,11 @@ const About = () => {
       />
       <p className='text-lg mb-4'>What is Keja?</p>
       <p className='mb-8'>
-        Keja is a homegrown platform that was developed by Tevin Irungu. It is designed specifically for Kenyans, offering
-        a unique twist on accommodation services. Inspired by the success of
-        global giants like Airbnb, Keja brings the concept closer to home,
-        catering to the diverse needs and preferences of local communities
-        across Kenya.
+        Keja is a homegrown platform that was developed by Tevin Irungu. It is
+        designed specifically for Kenyans, offering a unique twist on
+        accommodation services. Inspired by the success of global giants like
+        Airbnb, Keja brings the concept closer to home, catering to the diverse
+        needs and preferences of local communities across Kenya.
       </p>
       <p className='text-lg mb-4'>Simplified Payments with Mpesa</p>
       <p className='mb-8'>

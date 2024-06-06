@@ -26,8 +26,8 @@ const Home = () => {
   return (
     <div className='h-auto w-screen flex flex-col items-start backdrop-brightness-20 border-b border-gray-300'>
       {isVisible && (
-        <div className='mx-auto bg-white backdrop-blur-2 bg-opacity-25 py-6 px-8 gap-8 shadow-lg shadow-neutral-300 rounded flex justify-center items-center mt-36'>
-          <h1 className='text-2xl font-bold mb-4 text-zinc-700'>
+        <div className='mx-auto bg-black  py-6 px-8 gap-8 shadow-lg shadow-neutral-300 rounded flex justify-center items-center mt-36'>
+          <h1 className='text-2xl font-bold mb-4 text-zinc-300'>
             Search Destinations
           </h1>
           <div className='mb-4'>
@@ -52,7 +52,7 @@ const Home = () => {
           <motion.div className='mb-4' whileHover={{ scale: 1.1 }}>
             <IoSearchCircleSharp
               className='py-0 cursor-pointer'
-              style={{ color: "black" }}
+              style={{ color: "white" }}
               size={38}
             />
           </motion.div>

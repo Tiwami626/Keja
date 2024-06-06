@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
 import images from "../images";
 
 const hostsAndPrices = [
@@ -8,41 +6,33 @@ const hostsAndPrices = [
   { host: "Kantai", price: "Ksh.4200" },
   { host: "Gladys", price: "Ksh.5800" },
   { host: "Jaymo", price: "ksh.5,500" },
+  { host: "Peter", price: "ksh.5,500" },
+  { host: "Brian", price: "ksh.5,500" },
+  { host: "Njeri", price: "ksh.5,500" },
 ];
 
 const Body = () => {
-  const [width, setWidth] = useState(0);
-  const carousel = useRef();
-
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-
   return (
-    <motion.div
-      whileTap={{ cursor: "grabbing" }}
-      ref={carousel}
-      className='carousel cursor-grab overflow-hidden mt-10'>
-      <div className='flex items-centre justify-center mx-auto'>
-        <h1 className='text-2xl bg-gray-200 bg-opacity-40 shadow-md rounded px-4'>Featured Hosts</h1>
+    <div className='container mx-auto mt-10'>
+      <div className='flex items-center justify-center mb-8'>
+        <h1 className='text-2xl bg-gray-200 bg-opacity-40 shadow-md rounded px-4'>
+          Featured Hosts
+        </h1>
       </div>
-      <motion.div
-        drag='x'
-        dragConstraints={{ right: 0, left: -width }}
-        className='inner-carousel flex'>
+      <div className='grid grid-cols-4 gap-4'>
         {images.map((image, index) => {
           const { host, price } = hostsAndPrices[index];
           return (
             <div
-              className='item min-h-80 w-1/3 p-6 relative'
+              className='relative p-4'
               key={index}
               style={{ position: "relative" }}>
               <img
                 src={image}
                 alt=''
-                className='rounded-md w-full h-full pointer-events-none'
+                className='rounded-md w-full h-full object-cover'
               />
-              <div className='text-container absolute bottom-0 left-0 p-2 mb-8 mx-8 rounded'>
+              <div className='absolute bottom-0 left-0 p-2 mb-8 mx-8 rounded'>
                 <p className='font-bold text-base bg-black bg-opacity-40 text-white px-4'>
                   Hosted By: {host}
                 </p>
@@ -53,8 +43,8 @@ const Body = () => {
             </div>
           );
         })}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

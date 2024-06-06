@@ -16,7 +16,9 @@ const Navbar = () => {
         KE<span className='text-teal-400'>JA</span>
       </Link>
       <ul className='flex items-center gap-8 text-zinc-800 cursor-pointer'>
-        <li className='hover:text-neutral-500'>Airbnb your Home</li>
+        <li className='hover:text-neutral-500'>
+          <Link to='/hosting'>Airbnb your Home</Link>
+        </li>
         <li className='hover:text-neutral-500' onClick={toggleLogIn}>
           Log in / Sign up
         </li>
