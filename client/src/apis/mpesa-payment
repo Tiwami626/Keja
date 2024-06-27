@@ -1,0 +1,7 @@
+import axios from "axios";
+
+const payment = axios.create({
+    baseURL: 'http://localhost:5000/mpesa'
+});
+
+export default payment;
